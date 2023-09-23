@@ -1,13 +1,18 @@
 # Web scraper example
 
-from urllib import request
+from urllib.request import urlopen
 
+homeRepo = 'https://github.com/anthonym01/Web-Scraper'
+urltoScrape = homeRepo
 
-url_to_scrape = 'https://github.com/anthonym01/Web-Scraper'
-
+def inputlink():
+    urltoScrape = input("Enter a Url to scrape: ")
+    if urltoScrape == "" or " ":
+        urltoScrape=homeRepo
+    scrape(urltoScrape)
 
 def scrape(url):
     # Get the HTML of the page
     print('Scraping ' + url)
 
-scrape(url_to_scrape)
+inputlink()# Starting point
