@@ -7,7 +7,7 @@ urltoScrape = homeRepo
 
 def inputlink():
     urltoScrape = input("Enter a Url to scrape: ")
-    if urltoScrape == "" or " ":
+    if urltoScrape == "" or urltoScrape == " ":
         urltoScrape=homeRepo
     scrape(urltoScrape)
 
